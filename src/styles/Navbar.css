@@ -1,74 +1,106 @@
 .navbar {
-    background-color: #F0F0F0; /* Set your desired background color */
-    padding: 1rem 0;
-    display: flex;
-    justify-content: space-between; /* Align items horizontally */
-    align-items: center;
-  }
-  
-  .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .logo {
-    font-family: serif; /* Adjust font as needed */
-    font-size: 1.5rem;
-    color: #3C4836; /* Set your desired text color */
-  }
-  
-  .logo span {
-    font-size: 1rem;
-  }
-  
-  .menu-icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: 20px;
-    cursor: pointer;
-  }
-  
-  .menu-icon span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background-color: #3C4836; /* Set your desired color */
-    transition: transform 0.3s ease-in-out;
-  }
-  
-  .menu-icon.open span:nth-child(1) {
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-  
-  .menu-icon.open span:nth-child(2) {
-    opacity: 0;
-  }
-  
-  .menu-icon.open span:nth-child(3) {
-    transform: rotate(-45deg) translate(5px, -5px);
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 2rem; /* Add gap between buttons */
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-  }
-  
-  .nav-links.open {
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .nav-links a {
-    font-family: serif; /* Adjust font as needed */
-    font-size: 1rem;
-    color: #3C4836; /* Set your desired link color */
-    text-decoration: none;
-    padding: 10px 15px;
-    border-radius: 5px;
-    background-color: #F0F0F0; /* Set your desired background color */
-  }
+  background-color: #f7f6e8; /* Light cream tone matching the design */
+  padding: 1rem 0;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  position: relative; /* For positioning the menu and buttons */
+}
+
+.logo {
+  font-family: "Georgia", serif; /* Elegant serif font for the logo */
+  font-size: 1.5rem; /* Main font size */
+  font-weight: bold;
+  color: #3c4836; /* Dark text color */
+  text-align: center;
+}
+
+.logo span {
+  display: block; /* Makes "WITH IRAN" appear beneath the main title */
+  font-size: 1rem; /* Smaller subtitle */
+  font-weight: normal;
+  margin-top: 0.2rem; /* Add spacing between title and subtitle */
+}
+
+.menu-icon {
+  position: absolute;
+  left: -10rem; /* Position menu icon to the left */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #3c4836; /* Dark greenish text color */
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.menu-icon.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-icon.open span:nth-child(2) {
+  opacity: 0; /* Middle line disappears */
+}
+
+.menu-icon.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.nav-links {
+  position: absolute;
+  right: -10rem; /* Position buttons to the right */
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-family: "Georgia", serif;
+  font-size: 1rem;
+  padding: 10px 20px;
+  border: 2px solid transparent;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.reserve-btn {
+  background-color: #f7d083; /* Golden yellow for reserve button */
+  color: #3c4836; /* Dark text color */
+  border-color: #f7d083;
+  font-weight: bold;
+}
+
+.reserve-btn:hover {
+  background-color: #f5c26b; /* Slightly darker hover shade */
+  border-color: #f5c26b;
+}
+
+.contact-btn {
+  background-color: transparent; /* Transparent for the contact button */
+  color: #3c4836; /* Dark text color */
+  border: 2px solid #3c4836; /* Border matching text color */
+  font-weight: bold;
+}
+
+.contact-btn:hover {
+  background-color: #3c4836; /* Dark fill on hover */
+  color: #fff; /* White text */
+}

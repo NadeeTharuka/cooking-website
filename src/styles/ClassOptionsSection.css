@@ -1,39 +1,64 @@
-/* Style the class options section */
-.class-options {
-    background-color: #f0f0f0;
-    padding: 5rem 0;
-    text-align: center;
+/* Style the container (with no background) */
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  gap: 1rem;
+  width: 100%;
+  height: 100%; /* Ensure full height */
 }
 
-/* Style the class options section heading */
-.class-options h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+/* Apply styling for the background container */
+.background-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  border-radius: 8px;
+  align-items: center; /* Center the cards vertically */
+  box-sizing: border-box; /* Prevents overflow and keeps padding inside */
+  width: 100%;
 }
 
-/* Style the class cards */
-.class-options .class-cards {
-    display: flex;
-    justify-content: space-between;
+/* Style individual card */
+.card {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 300px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Add transparency to the cards */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease-in-out;
 }
 
-/* Style individual class cards */
-.class-options .class-card {
-    width: 30%; 
-    border: 1px solid #ccc;
-    padding: 1rem;
-    border-radius: 5px;
-    text-align: center;
+/* Hover effect on cards */
+.card:hover {
+  transform: translateY(-10px); /* Adds lift to cards when hovered */
 }
 
-/* Style class card images */
-.class-options .class-card img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 1rem;
+/* Style the images inside the cards */
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px; /* Optional: Add rounded corners to the images */
 }
 
-/* Style class card titles */
-    .class-options .class-card h3 {
-    margin: 0;
+/* Style the card title */
+.card h2 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #333; /* Title color */
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .background-container {
+    flex-direction: column; /* Stack the cards vertically on small screens */
+    align-items: center;
+  }
 }

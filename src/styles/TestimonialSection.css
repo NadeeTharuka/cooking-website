@@ -1,47 +1,44 @@
-/* Style the testimonial section */
 .testimonial {
-    background-color: #F0F0F0; 
-    padding: 5rem 0;
-    text-align: center;
+  background-color: #f0f0f0;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
 }
 
-/* Style the testimonial section heading */
-.testimonial h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.testimonial-text {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 25px;
+  font-style: italic;
+  margin-bottom: 2rem;
+  color: #555;
 }
 
-/* Style the testimonial card */
-.testimonial .testimonial-card {
-    background-color: #fff;
-    padding: 2rem;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    max-width: 500px; /* Adjust as needed */
-    margin: 0 auto; /* Center the card */
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the image and text horizontally */
 }
 
-/* Style the testimonial text */
-.testimonial .testimonial-text p {
-    font-style: italic;
-    margin-bottom: 1rem;
+.testimonial-author img {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  margin-right: 1rem;
+  border: 2px solid #f1c376;
 }
 
-/* Style the testimonial author */
-.testimonial .testimonial-author {
-    display: flex;
-    align-items: center;
+.testimonial-author p {
+  margin: 0;
+  color: #777;
 }
 
-/* Style the author image */
-.testimonial .testimonial-author img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    margin-right: 1rem;
+/* Add quotes to the testimonial */
+
+.testimonial-card::before {
+  left: -30px;
 }
 
-/* Style the author name */
-.testimonial .testimonial-author p {
-    margin: 0;
+.testimonial-card::after {
+  right: -30px;
 }
