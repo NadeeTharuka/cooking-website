@@ -1,5 +1,8 @@
 import React from "react";
 import "./../styles/HeroSection.css";
+// import image1 from "../images/image1.jpg";
+// import image2 from "../images/image2.jpg";
+// import image3 from "../images/image3.jpg";
 
 function HeroSection() {
   return (
@@ -19,11 +22,11 @@ function HeroSection() {
             culture!
           </p>
         </div>
-        <div className="image-grid">
-          <img src="image1.jpg" alt="Food Image 1" />
-          <img src="image2.jpg" alt="Food Image 2" />
-          <img src="image3.jpg" alt="Food Image 3" />
-        </div>
+        {/* <div className="image-grid">
+          <img src={image1} alt="Food 1" />
+          <img src={image2} alt="Food 2" />
+          <img src={image3} alt="Delicious Sri Lankan dish" />
+        </div> */}
       </div>
     </section>
   );

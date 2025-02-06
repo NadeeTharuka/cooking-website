@@ -1,5 +1,6 @@
 import React from "react";
 import "./../styles/TestimonialSection.css";
+import emmaBrown from "../images/emma-brown.jpg"; // Import the image
 
 function TestimonialSection() {
   return (
@@ -13,7 +14,7 @@ function TestimonialSection() {
             </p>
           </div>
           <div className="testimonial-author">
-            <img src="emma-brown.jpg" alt="Emma Brown" />
+            <img src={emmaBrown} alt="Emma Brown" />
           </div>
           <div className="testimonial-name">
             <p>Emma Brown, NYC</p>
