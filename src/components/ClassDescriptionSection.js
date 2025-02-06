@@ -7,7 +7,13 @@ import image3 from "../images/image3.jpg";
 import image4 from "../images/image4.jpg";
 import image5 from "../images/image5.jpg";
 import image6 from "../images/image6.jpg";
-import middleImage from "../images/middle_image.jpg";
+import video1 from "../videos/VID-20250206-WA0001.mp4"; // Import your video file
+import video2 from "../videos/VID-20250206-WA0002.mp4"; // Import additional video file
+import video3 from "../videos/VID-20250206-WA0003.mp4"; // Import additional video file
+import video4 from "../videos/VID-20250206-WA0004.mp4"; // Import additional video file
+import video5 from "../videos/VID-20250206-WA0005.mp4"; // Import additional video file
+import video6 from "../videos/VID-20250206-WA0006.mp4"; // Import additional video file
+import video7 from "../videos/VID-20250206-WA0007.mp4"; // Import additional video file
 
 function ClassDescriptionSection() {
   const [slideIndex, setSlideIndex] = useState(0);
@@ -21,6 +27,7 @@ function ClassDescriptionSection() {
   }, []);
 
   const images = [image1, image2, image3, image4, image5, image6];
+  const videos = [video1, video2, video3, video4, video5, video6, video7]; // Array of video files
 
   return (
     <section className="class-description">
@@ -43,8 +50,13 @@ function ClassDescriptionSection() {
             Explore Sri Lanka's Rich <br></br> Flavors, Hands-On
           </h2>
 
-          <div className="middle-image-container">
-            <img src={middleImage} alt="Middle Image" />
+          <div className="middle-video-container">
+            {videos.map((video, index) => (
+              <video key={index} autoPlay muted loop>
+                <source src={video} type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ))}
           </div>
           <p>
             Join Chef Iran in exploring the rich flavors of Sri Lankan cuisine.
